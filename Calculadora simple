@@ -1,0 +1,32 @@
+import time
+print("Bienvenido a la calculadora")
+time.sleep(2)
+respuesta = input("¿Qué operación quieres hacer?: \na)Suma \nb)Resta\nc)Multiplicación\nd)División \n")
+if respuesta == "a":
+  numero1 = input("Introduzca el primer número: ")
+  numero2 = input("Introduzca el segundo número: ")
+  time.sleep(1.5)
+  print("El resultado es: " + str(float(numero1) + float(numero2)))
+if respuesta == "b":
+  numero1 = input("Introduzca el primer número: ")  
+  numero2 = input("Introduzca el segundo número: ")
+  time.sleep(1.5)
+  print("El resultado es: " + str(float(numero1) - float(numero2)))
+if respuesta == "c":
+  numero1 = input("Introduzca el primer número: ")
+  numero2 = input("Introduzca el segundo número: ")
+  time.sleep(1.5)
+  print("El resultado es: " + str(float(numero1) * float(numero2)))
+if respuesta == "d":
+  numero1 = input("Introduzca el primer número: ")
+  numero2 = input("Introduzca el segundo número: ")
+  time.sleep(1.5)
+  print("El resultado es: " + str(float(numero1) / float(numero2)))
+  time.sleep(1.5)
+  respuesta2 = input("¿Quieres saber el resto de la división? \na)Sí \nb)No \n")
+  if respuesta2 == "a":
+    time.sleep(1.5)
+    print("El resto es: " + str(float(numero1) % float(numero2 )))
+  if respuesta2 == "b":
+    print("Gracias por usar la calculadora")
+  
