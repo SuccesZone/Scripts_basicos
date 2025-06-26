@@ -1,0 +1,26 @@
+import random
+import time
+frases = ["La disciplina es el puente entre tus sueños de riqueza y tu realidad millonaria.",
+"No es la suerte la que construye millonarios, es la constancia diaria.",
+"El primer millón no se gana, se construye con hábitos sólidos.",
+"Ganar dinero es fácil; mantenerlo y multiplicarlo requiere disciplina.",
+"Mientras otros duermen, el disciplinado trabaja su futuro millonario.",
+"La riqueza verdadera no está en el banco, está en tu mente entrenada.",
+"El dinero es una consecuencia, la disciplina es la causa.",
+"El millonario no gasta primero, invierte primero.",
+"Disciplina es decirle 'no' a lo fácil para decirle 'sí' a lo extraordinario.",
+"Cada hábito diario suma o resta en tu camino a la riqueza.",
+"Los sueños valen poco sin la disciplina que los respalde.",
+"Haz lo que otros no están dispuestos a hacer y vivirás como ellos nunca podrán.",
+"El éxito financiero es 10% inspiración y 90% autodisciplina.",
+"Ser millonario es una meta; ser disciplinado es el camino.",
+"Tu cuenta bancaria es un reflejo directo de tu disciplina interna.",
+"No necesitas más dinero, necesitas más enfoque.",
+"Un presupuesto es la declaración de guerra contra la pobreza.",
+"Millones no se ganan en un día, se ganan en cada día bien vivido.",
+"El que domina su mente, domina su destino financiero.",
+"La libertad financiera se paga con el precio de la disciplina diaria."]
+frase = random.choice(frases)
+print("Tu frase motivadora del día es:")
+time.sleep(1)
+print(frase)
