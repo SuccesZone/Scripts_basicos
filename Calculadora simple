@@ -1,32 +1,120 @@
 import time
+import math
+uso_calcuadora = True 
+voluntad = 0
+Rendirse = 1
 print("Bienvenido a la calculadora")
-time.sleep(2)
-respuesta = input("¿Qué operación quieres hacer?: \na)Suma \nb)Resta\nc)Multiplicación\nd)División \n")
-if respuesta == "a":
-  numero1 = input("Introduzca el primer número: ")
-  numero2 = input("Introduzca el segundo número: ")
-  time.sleep(1.5)
-  print("El resultado es: " + str(float(numero1) + float(numero2)))
-if respuesta == "b":
-  numero1 = input("Introduzca el primer número: ")  
-  numero2 = input("Introduzca el segundo número: ")
-  time.sleep(1.5)
-  print("El resultado es: " + str(float(numero1) - float(numero2)))
-if respuesta == "c":
-  numero1 = input("Introduzca el primer número: ")
-  numero2 = input("Introduzca el segundo número: ")
-  time.sleep(1.5)
-  print("El resultado es: " + str(float(numero1) * float(numero2)))
-if respuesta == "d":
-  numero1 = input("Introduzca el primer número: ")
-  numero2 = input("Introduzca el segundo número: ")
-  time.sleep(1.5)
-  print("El resultado es: " + str(float(numero1) / float(numero2)))
-  time.sleep(1.5)
-  respuesta2 = input("¿Quieres saber el resto de la división? \na)Sí \nb)No \n")
-  if respuesta2 == "a":
+while voluntad != Rendirse:
+  time.sleep(2)
+  respuesta = input("¿Qué operación quieres hacer?: \na)Suma \nb)Resta\nc)Multiplicación\nd)División \ne)Raiz cuadrada\nf)Potencia\n")
+  if respuesta == "a":
+    numero1 = input("Introduzca el primer número: ")
+    numero2 = input("Introduzca el segundo número: ")
     time.sleep(1.5)
-    print("El resto es: " + str(float(numero1) % float(numero2 )))
-  if respuesta2 == "b":
-    print("Gracias por usar la calculadora")
+    print("El resultado es: " + str(float(numero1) + float(numero2)))
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+  elif respuesta == "b":
+    numero1 = input("Introduzca el primer número: ")  
+    numero2 = input("Introduzca el segundo número: ")
+    time.sleep(1.5)
+    print("El resultado es: " + str(float(numero1) - float(numero2)))
+    time.sleep(1.5)
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+  elif respuesta == "c":
+    numero1 = input("Introduzca el primer número: ")
+    numero2 = input("Introduzca el segundo número: ")
+    time.sleep(1.5)
+    print("El resultado es: " + str(float(numero1) * float(numero2)))
+    time.sleep(1.5)
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+  elif respuesta == "d":
+    numero1 = input("Introduzca el primer número: ")
+    numero2 = input("Introduzca el segundo número: ")
+    time.sleep(1.5)
+    print("El resultado es: " + str(float(numero1) / float(numero2)))
+    time.sleep(1.5)
+    respuesta2 = input("¿Quieres saber el resto de la división? \na)Sí \nb)No \n")
+    if respuesta2 == "a":
+      time.sleep(1.5)
+      print("El resto es: " + str(float(numero1) % float(numero2 )))
+    elif respuesta2 == "b":
+      print("Gracias por usar la calculadora")
+    else:
+      print("No has introducido una opción válida")
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+  elif respuesta == "e":
+    numero1 = float(input("Introduzca el número: "))
+    time.sleep(1.5)
+    print("El resultado es: " +  str(math.sqrt(numero1)))
+    time.sleep(1.5)
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+  elif respuesta == "f":
+    numero1 = float(input("Introduzca el número: "))
+    numero2 = float(input("Introduzca la potencia: "))
+    time.sleep(1.5)
+    print("El resultado es: " +  str(math.pow(numero1, numero2)))
+    time.sleep(1.5)
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+  else:
+    print("No has introducido una opción válida")
+    respuesta1 = input("¿Quieres hacer otra operación? \na)Sí \nb)No \n")
+    if respuesta1 == "a":
+      voluntad = 0
+      time.sleep(1.5)
+    elif respuesta1 == "b":
+      voluntad = 1
+      time.sleep(1.5)
+    else:
+      print("No has introducido una opción válida")
+print("Gracias por usar la calculadora")
+
+
   
