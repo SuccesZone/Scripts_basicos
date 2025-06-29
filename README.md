@@ -32,5 +32,3 @@ Autor
 Pablo latre lópez
 
 ¡Gracias por visitar y apoyar mi aprendizaje en programación y tecnología!
-
-Si quieres, dime tu usuario de GitHub y el nombre exacto del repositorio y te lo dejo con todo listo. ¿Quieres?
