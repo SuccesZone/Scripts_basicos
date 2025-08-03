@@ -1,0 +1,41 @@
+
+pip install requests beautifulsoup4 pandas
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+def scrapear_gumroad(usuario):
+    url = f"https://{usuario}.gumroad.com"
+    headers = {
+        "User-Agent": "Mozilla/5.0"
+    }
+
+    response = requests.get(url, headers=headers)
+
+    if response.status_code != 200:
+        print(f"Error al acceder a {url}")
+        return
+
+    soup = BeautifulSoup(response.text, "html.parser")
+
+    productos = []
+    items = soup.find_all("div", class_="product-card-wrapper")
+
+    for item in items:
+        nombre = item.find("div", class_="product-name")
+        precio = item.find("span", class_="price-text")
+
+        nombre = nombre.text.strip() if nombre else "Sin nombre"
+        precio = precio.text.strip() if precio else "Gratis o sin mostrar"
+
+        productos.append({
+            "Producto": nombre,
+            "Precio": precio
+        })
+
+    df = pd.DataFrame(productos)
+    df.to_csv("productos.csv", index=False)
+    print("Scraping completo. Resultados guardados en productos.csv")
+
+# Ejemplo de uso:
+scrapear_gumroad("yourusername")  # Reemplaza "yourusername" por el usuario real
